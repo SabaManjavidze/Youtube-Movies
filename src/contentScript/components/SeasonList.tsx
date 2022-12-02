@@ -8,16 +8,11 @@ type SeasonListPropType = {
 };
 type SeasonCardPropType = {
   season: SeasonType;
-  isSelected: boolean;
-  movieId: string;
 };
-const SeasonCard = ({ season, isSelected, movieId }: SeasonCardPropType) => {
+const SeasonCard = ({ season }: SeasonCardPropType) => {
   return (
     <div>
       <h2 className="text-3xl">Season {season.number}</h2>
-      {isSelected ? (
-        <EpisodeList movieId={movieId} seasonNum={season.number} />
-      ) : null}
     </div>
   );
 };
@@ -39,11 +34,10 @@ function SeasonList({ seasons, movieId }: SeasonListPropType) {
                     : setSelectedSes("")
                 }
               >
-                <SeasonCard
-                  season={item}
-                  isSelected={isCurrentSeasonSelected(item)}
-                  movieId={movieId}
-                />
+                <SeasonCard season={item} />
+                {isCurrentSeasonSelected(item) ? (
+                  <EpisodeList movieId={movieId} seasonNum={item.number} />
+                ) : null}
               </button>
             </div>
           ))
