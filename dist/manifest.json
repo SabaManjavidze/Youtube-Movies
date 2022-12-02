@@ -10,12 +10,7 @@
   "host_permissions": ["https://*.youtube.com/*"],
   "permissions": ["tabs", "scripting"],
   "background": {
-    "service_worker": "background.js"
-  },
-  "content_scripts": [
-    {
-      "matches": ["https://*.youtube.com/*"],
-      "js": ["contentScript.js"]
-    }
-  ]
+    "service_worker": "background.js",
+    "matches": ["https://*.youtube.com/*"]
+  }
 }

@@ -17,7 +17,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_dom_client__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom/client */ "./node_modules/react-dom/client.js");
 
 
-const popup = react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", null, "What's up World");
+const popup = react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, "Hello world");
 const container = document.createElement("div");
 document.body.appendChild(container);
 const root = (0,react_dom_client__WEBPACK_IMPORTED_MODULE_1__.createRoot)(container);
